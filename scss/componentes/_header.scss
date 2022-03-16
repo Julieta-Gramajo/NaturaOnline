@@ -1,0 +1,37 @@
+.header {
+    grid-area: header;
+    background: $primary-color;
+    background: $secondary-color;
+    
+    .navbar-light .navbar-toggler {
+        color: transparent;
+    }
+    
+    .navbar-light .navbar-nav .nav-link {
+        color: $font-color;
+    }
+    
+    .navbar-light .navbar-nav .nav-link:focus,
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: $font-color;
+    }
+    
+    .navbar-light .navbar-toggler-icon {
+        background-image: url(../img/a3.png);
+    }
+
+    .navbar-light .navbar-toggler {
+        border-color: transparent;
+    }
+
+    .anchor {
+        transition: all .3s;
+        border-bottom: .2rem solid transparent;
+        &:hover {
+            border-bottom: 1px solid $font-color;
+            color: $font-color;
+        }
+    }
+    
+}
+

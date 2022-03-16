@@ -1,0 +1,110 @@
+.footer {
+    grid-area: footer;
+    background: $primary-color;
+    background: $secondary-color;
+
+    ul {
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: $font-color;
+        }
+
+        img {
+            width: 3rem;
+            border-radius: 1rem;
+            transition: all .3s;
+
+            &:hover {
+                box-shadow: 0 0 1rem 0.1rem $font-color;
+            }
+        }
+    }
+
+    p {
+        color: $font-color;
+    }
+
+    input {
+        border: 1px solid $font-color;
+        border-radius: .3em;
+        padding: 0.8em 1.7em;
+        outline: none;
+        color: $font-color;
+        
+        &::placeholder {
+            color: $font-color;
+        }
+    }
+
+    .button {
+        --color: #fc7e7e;
+        padding: 0.8em 1.7em;
+        background-color: #fff;
+        border-radius: .3em;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: .5s;
+        font-weight: 400;
+        font-size: 17px;
+        border: 1px solid;
+        font-family: inherit;
+        text-transform: uppercase;
+        color: var(--color);
+        z-index: 1;
+        
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            border-radius: 50%;
+            z-index: -1;
+            background-color: var(--color);
+            transition: 1s ease;
+        }
+
+        &::before {
+            top: -1em;
+            left: -1em;
+        }
+
+        &::after {
+            left: calc(100% + 1em);
+            top: calc(100% + 1em);
+        }
+
+        &:hover::before,
+        &:hover::after {
+            height: 410px;
+            width: 410px;
+        }
+
+        &:hover {
+            color: rgb(252, 244, 239);
+        }
+
+        &:active {
+            filter: brightness(.8);
+        }
+    }
+};
+
+/*MAPAS*/
+
+$redes:(    
+    whatsapp: #02ea78,
+    instagram: #ff3a55,
+    facebook: #507dd2,
+);
+
+@each $key, $color in $redes{
+    .footer__#{$key}{
+        box-shadow: 0 0 0.2rem 0.1rem $color;
+    }
+};

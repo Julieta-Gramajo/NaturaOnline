@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid__container{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 0.5fr auto 0.5fr; 
+    gap: .4rem 0; 
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer"; 
+}
